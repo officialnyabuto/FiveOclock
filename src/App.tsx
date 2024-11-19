@@ -23,7 +23,7 @@ function App() {
       <div className="max-w-md w-full space-y-8">
         <div className="flex flex-col items-center justify-center space-y-8">
           <h1 className="text-2xl font-semibold text-gray-800 text-center">
-            World Clock
+            5PM Clock
           </h1>
           
           <div className="relative p-8">
