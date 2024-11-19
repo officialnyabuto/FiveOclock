@@ -29,12 +29,13 @@ export const AnalogClock: React.FC<AnalogClockProps> = ({ time: propTime }) => {
       {[...Array(60)].map((_, i) => (
         <div
           key={i}
-          className={`absolute left-1/2 top-0 -translate-x-1/2 origin-bottom ${
-            i % 5 === 0 ? 'h-3 w-0.75 bg-gray-400' : 'h-1.5 w-0.5 bg-gray-300'
-          }`}
+          className={`absolute left-1/2 -translate-x-1/2 ${
+            i % 5 === 0 ? 'h-4 w-1' : 'h-2 w-0.5'
+          } bg-gray-300`}
           style={{
+            top: '12px',
+            transformOrigin: '50% 120px',
             transform: `rotate(${i * 6}deg)`,
-            transformOrigin: '50% 32px',
           }}
         />
       ))}
@@ -43,13 +44,11 @@ export const AnalogClock: React.FC<AnalogClockProps> = ({ time: propTime }) => {
       {[...Array(12)].map((_, i) => (
         <div
           key={i}
-          className="absolute left-1/2 -translate-x-1/2"
+          className="absolute left-1/2 -translate-x-1/2 h-5 w-1.5"
           style={{
             top: '12px',
-            height: '18px',
-            width: '3px',
             background: 'linear-gradient(to bottom, #4B5563, #6B7280)',
-            borderRadius: '1.5px',
+            borderRadius: '1px',
             transformOrigin: '50% 120px',
             transform: `rotate(${i * 30}deg)`,
           }}
