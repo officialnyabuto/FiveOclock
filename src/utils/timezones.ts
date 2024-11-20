@@ -81,7 +81,7 @@ export const findClosestTo5PM = (): {
     const time = getTimeForOffset(parseFloat(offset));
     const diff = Math.abs(getMinutesTo5PM(time));
     
-    if (diff < minDifference && diff <= 15) {
+    if (diff < minDifference) {
       minDifference = diff;
       closestOffset = offset;
     }
